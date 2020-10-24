@@ -41,7 +41,7 @@ export default function DenseAppBar() {
               className={classes.menuButton}
               color="inherit"
               aria-label="menu"
-              onClick={() => window.history.go("/")}
+              // onClick={() => window.history.go("/")}
             >
               <HomeIcon />
             </IconButton>

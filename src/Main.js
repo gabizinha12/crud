@@ -26,6 +26,10 @@ const useStyles = makeStyles({
     width: "100%",
     height: 200,
   },
+  button: {
+    marginBottom: 20,
+    backgroundColor: "#00c853",
+  },
 });
 
 export default function BasicTable() {
@@ -47,7 +51,7 @@ export default function BasicTable() {
       const { data } = await axios.get("people");
       setState(data);
     } catch (error) {
-      throw new Error(error);
+      handleNotify(error.message, "error");
     } finally {
       setLoading(false);
     }
@@ -84,7 +88,9 @@ export default function BasicTable() {
         color="primary"
         type="submit"
         onClick={handleAdd}
+        className={classes.button}
       >
+        <CreateIcon color="default" onClick={() => handleAdd()} />
         Adicionar pessoa
       </Button>
       <TableContainer component={Paper}>
