@@ -1,5 +1,5 @@
-import axios from 'axios'
+import axios from "axios";
 
 export default axios.create({
-    baseURL: 'http://localhost:3000/api/'
-})
+  baseURL: "https://api-rest-node.azurewebsites.net/api/",
+});

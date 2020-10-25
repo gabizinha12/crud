@@ -165,10 +165,12 @@ function Create(props) {
                 <MenuItem value="">
                   <em>Nenhum</em>
                 </MenuItem>
-                <MenuItem value="solteiro">solteiro</MenuItem>
-                <MenuItem value="casado">casado</MenuItem>
-                <MenuItem value="divorciado">divorciado</MenuItem>
-                <MenuItem value="uniaoestavel">união estável</MenuItem>
+                <MenuItem value="Solteiro(a)">Solteiro(a)</MenuItem>
+                <MenuItem value="Casado(a)">Casado(a)</MenuItem>
+                <MenuItem value="Divorciado(a)">Divorciado(a)</MenuItem>
+                <MenuItem value="Viúvo(a)">Viúvo(a)</MenuItem>
+                <MenuItem value="Separado(a)">Separado(a)</MenuItem>
+                <MenuItem value="União Estável">União Estável</MenuItem>
               </Select>
             }
           />
