@@ -22,7 +22,7 @@
             "always"
         ],
         "quotes": [
-            "warn",
+            "off",
             "double"
         ],
         "react/prop-types": [
