@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+a {
+  text-decoration-style: none;
+  text-decoration: none;
+  margin-right: 20px;
+  color: white;
+  font-family: inherit;
+}

@@ -11,7 +11,6 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import CreateIcon from "@material-ui/icons/Create";
 import Paper from "@material-ui/core/Paper";
 import { Button, CircularProgress, Tooltip } from "@material-ui/core";
-// import { Pagination } from "@material-ui/lab";
 import Pagination from "@material-ui/lab/Pagination";
 
 import { useSnackbar } from "notistack";
