@@ -5,6 +5,7 @@
 -  MaterialUI
 - eslint
 - variáveis em inglês
+- desacoplamento de componentes(cada um em seu diretório)
 - É possível registrar, editar e deletar usuários
 # Para as requisições:
 - Foi usada a biblioteca Axios 
