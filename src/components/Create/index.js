@@ -61,13 +61,13 @@ function Create(props) {
         formData._id = user._id;
         const { data } = await axios.put("person/" + user._id, formData);
         if (data) {
-          handleNotify("Usuário alterado com sucesso", "success");
+          handleNotify("User updated with success", "success");
         }
       }
       if (!user._id) {
         const { data } = await axios.post("person", formData);
         if (data) {
-          handleNotify("Usuário criado com sucesso", "success");
+          handleNotify("User created with sucess", "success");
         }
       }
 
