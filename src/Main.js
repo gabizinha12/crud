@@ -59,8 +59,7 @@ export default function BasicTable() {
   const getUser = async (page, count) => {
     setLoading(true);
     try {
-      const p = this.state.page;
-      const { data } = await axios.get("people?page=${p}");
+      const { data } = await axios.get(`people?page=${page}`);
       setState(data);
     } catch (error) {
       handleNotify(error.message, "error");
@@ -69,8 +68,19 @@ export default function BasicTable() {
     }
   };
   useEffect(() => {
+    updatePage();
     getUser();
   }, [page]);
+
+  useEffect(() => {
+    updatePage();
+  }, [page]);
+
+  const updatePage = () => {
+    let count = 10;
+    console.log(page)
+    getUser(page, count);
+  }
 
   const deleteUser = async (id) => {
     setLoading(true);
