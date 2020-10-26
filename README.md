@@ -18,7 +18,7 @@ O usuário consegue editar normalmente os registros
 Exclude(DELETE)
 Ao clicar no botão o usuário consegue excluir o registro, e no final é retornada uma mensagem de erro ou sucesso.
 # Deploy
-O banco de dados está no serviço de cloud MongoDB Atlas (https://www.mongodb.com/cloud/atlas), o Front no Netlify com CI/CD, a API está hospedada no Azure no seguinte endereço:
+O banco de dados está no serviço de cloud MongoDB Atlas (https://www.mongodb.com/cloud/atlas), o Front no Netlify com CI/CD (https://thirsty-perlman-6ec93d.netlify.app/), a API está hospedada no Azure no seguinte endereço:
 (https://api-rest-node.azurewebsites.net/) com CI/CD também.
 
 
