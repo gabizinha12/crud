@@ -78,9 +78,9 @@ export default function BasicTable() {
 
   const updatePage = () => {
     let count = 10;
-    console.log(page)
+    console.log(page);
     getUser(page, count);
-  }
+  };
 
   const deleteUser = async (id) => {
     setLoading(true);
