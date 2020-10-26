@@ -11,6 +11,9 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import CreateIcon from "@material-ui/icons/Create";
 import Paper from "@material-ui/core/Paper";
 import { Button, CircularProgress, Tooltip } from "@material-ui/core";
+// import { Pagination } from "@material-ui/lab";
+import Pagination from "@material-ui/lab/Pagination";
+
 import { useSnackbar } from "notistack";
 import { useHistory } from "react-router-dom";
 
@@ -30,6 +33,9 @@ const useStyles = makeStyles({
     marginBottom: 20,
     backgroundColor: "#00c853",
   },
+  page: {
+    padding: "20px",
+  },
 });
 
 export default function BasicTable() {
@@ -44,11 +50,19 @@ export default function BasicTable() {
 
   const [state, setState] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [page, setPage] = useState(1);
+
+  const handleChange = (event, value) => {
+    let count = 10;
+    setPage(value);
+    getUser(page, count);
+  };
 
   const getUser = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.get("people");
+      const p = this.state.page;
+      const { data } = await axios.get("people?page=${p}");
       setState(data);
     } catch (error) {
       handleNotify(error.message, "error");
@@ -143,6 +157,13 @@ export default function BasicTable() {
                 ))}
               </>
             )}
+            <Pagination
+              count={10}
+              color="primary"
+              className={classes.page}
+              onChange={handleChange}
+              page={page}
+            />
           </TableBody>
         </Table>
       </TableContainer>
