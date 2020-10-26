@@ -69,6 +69,7 @@ export default function BasicTable() {
   };
 
   useEffect(() => {
+    updatePage();
     getUser();
   }, []);
 
