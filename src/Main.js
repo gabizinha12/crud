@@ -53,12 +53,10 @@ export default function BasicTable() {
   const [page, setPage] = useState(1);
 
   const handleChange = (event, value) => {
-    let count = 10;
     setPage(value);
-    getUser(page, count);
   };
 
-  const getUser = async () => {
+  const getUser = async (page, count) => {
     setLoading(true);
     try {
       const p = this.state.page;
@@ -70,10 +68,9 @@ export default function BasicTable() {
       setLoading(false);
     }
   };
-
   useEffect(() => {
     getUser();
-  }, []);
+  }, [page]);
 
   const deleteUser = async (id) => {
     setLoading(true);
