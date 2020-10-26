@@ -36,15 +36,7 @@ export default function DenseAppBar() {
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar variant="dense">
-            <IconButton
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="menu"
-              // onClick={() => window.history.go("/")}
-            >
-              <HomeIcon />
-            </IconButton>
+            <a href="/">Home</a>
             <Typography variant="h6" color="inherit">
               Crud
             </Typography>
